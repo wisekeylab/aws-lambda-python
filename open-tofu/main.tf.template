@@ -1,7 +1,18 @@
+terraform {
+  cloud {
+    hostname = "app.terraform.io"
+    organization = "wisekey"
+    workspaces {
+      tags = ["openmpic"]
+    }
+  }
+}
+
 # Init a default aws provider for the api deployment.
 provider "aws" {
   region                  = "{{api-region}}"
-  profile                 = "default"
+  # Disabled to allow for profile switching using the AWS_PROFILE env var, e.g. to choose between wisekeysandbox or wisekeynonprod AWS.
+  # profile                 = "default"
 }
 
 # Python open-mpic layer (contains third party libraries)

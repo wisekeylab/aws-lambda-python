@@ -13,11 +13,13 @@ layer/*_layer_content.zip
 # Generated tf files.
 *.generated.tf
 
+# Versioning these files for now to easily share the same configuration for testing.
+
 # Config file.
-config.yaml
+#config.yaml
 
 # Deployment ID
-deployment.id
+# deployment.id
 
 # Byte-compiled / optimized / DLL files
 **/__pycache__/
